@@ -1,0 +1,155 @@
+.start-page-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-logo {
+  width: 108px;
+  display:block;
+  position: absolute;
+  top: 40px;
+  left: 25px;
+}
+
+.sp-text {
+  position: relative;
+  padding: 45vh 5% 5vh 55%;
+  z-index: 10;
+}
+
+.sp-text-h {
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.sp-text-p {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.sp-bg-img {
+  display: block;
+  position: absolute;
+  max-width: 700px;
+  width: 50%;
+  left: 10%;
+  bottom: -50%;
+  will-change: transform;
+  animation: sp-bg 1.25s 0s 1,sp-bg2 4s 1.25s infinite;
+  animation-timing-function: ease-out,ease-in-out;
+  z-index: -1;
+}
+
+@keyframes sp-bg {
+  0% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+
+@keyframes sp-bg2 {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+  50% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+      opacity: 1;
+  }
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@media (max-width:1300px) {
+  .sp-bg-img {
+    bottom: -45%;
+  }
+}
+
+@media (max-width:1100px) and (max-height: 620px) {
+  .sp-text {
+    padding: 35vh 5% 5vh 55%;
+  }
+
+  .sp-bg-img {
+    width: 45%;
+  }
+}
+
+@media (max-width:998px) {
+  .sp-bg-img {
+    bottom: 0px;
+  }
+}
+
+@media (max-width:767px) {
+  .sp-text {
+    padding: 200px 5% 50px;
+    text-align: center;
+  }
+
+  .sp-bg-img {
+    width: 90%;
+    bottom: auto;
+    left: 15%;
+    top: 150px;
+  }
+
+  @keyframes sp-bg {
+    0% {
+      -webkit-transform: translateY(200px);
+      transform: translateY(200px);
+      opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: .3;
+    }
+  }
+
+
+  @keyframes sp-bg2 {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: .3;
+  }
+    50% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+        opacity: .3;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: .3;
+    }
+  }
+}
+
+@media (max-width:400px) {
+  .sp-logo {
+    width: 80px;
+    top: 25px;
+  }
+
+  .sp-text {
+    padding: 120px 5% 50px;
+  }
+}

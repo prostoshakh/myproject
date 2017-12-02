@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: @MS5;
+  color: @Grey;
+}
+
+.main-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  padding-left: 300px;
+  min-height: ~"calc(100vh - 56px)";
+  box-sizing: border-box;
+  padding-bottom: 120px;
+}
+
+.bold {
+  font-family: @MS7;
+}
+
+.thin {
+  font-family: @MS1;
+}
+
+.def-btn {
+  font-family: @MS5;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: @Red;
+  padding: 11px 22px;
+  font-size: 18px;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  box-shadow: none;
+
+  &:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all .7s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+  }
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+
+    &:after {
+      left: 120%;
+      transition: all .7s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  &_shadow {
+    box-shadow: 0px 5px 30px 3px rgba(0,0,0,0.5);
+  }
+
+  &_si {
+    width: 42%;
+    margin: 4%;
+    box-sizing: border-box;
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  &_wide {
+    width: 100%;
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  &_bd {
+    padding: 9px 34px;
+    font-size: 14px;
+    margin: 0px 11px;
+    vertical-align: bottom;
+  }
+
+  &_bd-cart {
+    padding: 5px 16px;
+
+    svg {
+      display: inline-block;
+    }
+
+    .plus {
+      width: 10px;
+      vertical-align: super;
+    }
+
+    .cart {
+      width: 20px;
+    }
+  }
+
+  &_yellow {
+    background-color: @Yellow;
+  }
+
+}
+
+.popup {
+  position: fixed;
+  background-color: @GreyL;
+  border: 1px solid @GreyD;
+  max-width: 800px;
+  width: ~"calc((100% - 300px) / 100 * 90)";
+  padding: 130px 50px;
+  box-sizing: border-box;
+  top: -100%;
+  left: ~"calc(50% + 150px)";
+  transform: translateX(-50%);
+  text-align: center;
+  background-image: url('../img/icons/popupbackrnd.svg');
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: right -55px bottom -55px;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    height: 44px;
+    width: 44px;
+  }
+}
+
+.popup-text {
+  font-size: 48px;
+  line-height: 40px;
+}
+
+@media (max-width:998px) {
+  .content {
+    padding-left: 150px;
+  }
+}
+
+@media (max-width:767px) {
+  .content {
+    padding-left: 0;
+  }
+}

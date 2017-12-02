@@ -1,0 +1,148 @@
+.content-container_index {
+  padding-top: 45px;
+}
+
+.main-h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.main-p {
+  font-family: @MS1;
+  font-size: 14px;
+  margin: 0 auto 40px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.sell-items-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.sell-item {
+  width: 50%;
+  text-align: center;
+  min-height: 290px;
+}
+
+.sell-item-content {
+  width: 270px;
+  margin: 0 auto 40px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    background-color: @GreyL;
+    border: 5px solid transparent;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -5px;
+    left: -5px;
+    z-index: -1;
+    transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+
+  &:hover:before {
+    transform: scaleY(1.1) scaleX(1.2);
+    background-color: white;
+    border-color: @GreyL;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background-size: contain;
+    background-position: left;
+    top: -20px;
+    left: -15px;
+  }
+
+  &_hit {
+    &:after {
+      background-image: url('../img/icons/corner-hit.png');
+    }
+  }
+
+  &_sold {
+    &:after {
+      background-image: url('../img/icons/corner-sold.png');
+    }
+    .si-img {
+      opacity: 0.4;
+    }
+  }
+
+  &_count {
+    &:after {
+      background-image: url('../img/icons/corner-count.png');
+    }
+  }
+
+}
+
+.si-h {
+  margin: 0px;
+  padding: 10px 20px 20px;
+  font-size: 24px;
+}
+
+.si-img {
+  height: 180px;
+  margin-left: -10px;
+  margin-right: -10px;
+  img {
+    width: 100%;
+  }
+}
+
+.si-p {
+  margin: 20px;
+  font-size: 14px;
+}
+
+.si-price {
+  display: block;
+  margin-bottom: 20px;
+  font-family: @MS7;
+  font-size: 24px;
+  color: @Red;
+}
+
+.si-btns {
+  font-size: 0;
+}
+
+@media (min-width:1400px) {
+  .sell-item {
+    width: 33.33%;
+  }
+}
+
+@media (max-width:998px) {
+  
+}
+
+@media (max-height:810px) and (min-width:998px) {
+  .navigation {
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width:767px) {
+  .sell-item {
+    width: 100%;
+  }
+}

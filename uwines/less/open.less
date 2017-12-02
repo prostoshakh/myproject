@@ -1,0 +1,148 @@
+.content-container_open {
+  padding-top: 45px;
+  padding-bottom: 100px;
+}
+
+.box-desc-container {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product-desc-wide {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bd-text {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+
+  &_slider {
+    margin-top: 30px;
+    max-width: 520px;
+  }
+}
+
+.bd-img {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.bd-elements {
+  margin-top: 25px;
+}
+
+.bd-price {
+  font-family: @MS7;
+  font-size: 24px;
+}
+
+.product-icons-list {
+  list-style: none;
+  padding: none;
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icon-item {
+  width: 33.33%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.icon-item-img {
+  display: block;
+  width: 55px;
+  height: 55px;
+  margin: 0px auto 5px;
+  img {
+    width: 100%;
+  }
+}
+
+.icon-item-h {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.icon-item-desc {
+  display: block;
+  font-size: 12px;
+}
+
+.wine-list {
+  margin-top: 25px;
+  font-size: 14px;
+  list-style: none;
+  padding: 0;
+}
+
+.wine-list-item {
+  display: inline-block;
+  cursor: pointer;
+
+  &.active {
+    font-family: @MS7;
+  }
+}
+
+.one-row {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.product-slider {
+  width: 280px;
+  position: relative;
+  font-size: 14px;
+}
+
+.product-slider-item-img {
+  display: block;
+  height: 215px;
+  width: 150px;
+  margin: 0px auto 15px;
+}
+
+.product-slider-item-h {
+  display: block;
+  font-family: @MS7;
+}
+
+.product-slider-item-desc {
+  display: block;
+}
+
+.slider-arrow {
+  position: absolute;
+  width: 50px;
+  top: 80px;
+
+  &_prev {
+    left: 0;
+    transform: scale(-1);
+  }
+
+  &_next {
+    left: 225px;
+  }
+
+}
+
+.disabled .slider-arrow {
+  opacity: 0.5;
+}

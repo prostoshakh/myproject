@@ -1,0 +1,91 @@
+@import 'libs/normalize.css';
+@import 'libs/animate.css';
+@import 'libs/owl.carousel.min.css';
+@import 'libs/owl.theme.default.min.css';
+
+@import "def-elements.less";
+@import "fonts.less";
+@import "start.less";
+@import "sidebar.less";
+@import "trp-and-footer.less";
+@import "index.less";
+@import "cart.less";
+@import "open.less";
+@import "faq.less";
+@import "about&contacts.less";
+
+
+
+@Red : #a52b26;
+@Yellow : #f2ca44;
+@Grey : #4f4f4f;
+@GreyD : #4c4c4c;
+@GreyL : #f2f2f2;
+
+@MS1 : 'Museo Sans Cyrl 100';
+@MS5 : 'Museo Sans Cyrl 500';
+@MS7 : 'Museo Sans Cyrl 700';
+@TimesB : 'Times New Roman';
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: ~"calc(100% - 300px)";
+  top: 0px;
+  left: -100%;
+  background-color: @GreyL;
+  z-index: 99;
+  will-change: left;
+  transition: all .8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+  &.active {
+    left: 300px;
+  }
+}
+
+.loader-icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  will-change: transform;
+  animation: rotate 2.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+
+  &:nth-child(2) {animation-delay: 0.1s};
+  &:nth-child(3) {animation-delay: 0.2s};
+  &:nth-child(4) {animation-delay: 0.3s};
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width:998px) {
+  .loader{
+    &.active {
+      left: 150px;
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .loader{
+    &.active {
+      left: 0px;
+    }
+  }
+}
